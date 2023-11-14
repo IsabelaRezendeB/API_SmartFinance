@@ -9,19 +9,19 @@ class UsuarioViewSet(viewsets.ModelViewSet):
     """Exibindo todas os usuarios"""
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    search_fields = ['carteira_id__id']
+    filter_backends[1].search_param = 'q'
 
 class AcaoViewSet(viewsets.ModelViewSet):
     """Exibindo todas as acoes"""
     queryset = Acao.objects.all()
     serializer_class = AcaoSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
-    search_fields = ['nome']
+    search_fields = ['carteira_id__id']
     filter_backends[1].search_param = 'q'
 
 class CarteiraViewSet(viewsets.ModelViewSet):
     """Exibindo todas as carteiras"""
     queryset = Carteira.objects.all()
     serializer_class = CarteiraSerializer
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
-    search_fields = ['usuario_id__UID']
-    filter_backends[1].search_param = 'q'

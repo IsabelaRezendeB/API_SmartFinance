@@ -1,3 +1,6 @@
 from django.contrib import admin
+from smartfinance.models import Usuario, Acao, Carteira
 
-# Register your models here.
+admin.site.register(Usuario)
+admin.site.register(Acao)
+admin.site.register(Carteira)
