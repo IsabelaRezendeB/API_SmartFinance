@@ -16,10 +16,18 @@ class Usuario(models.Model):
 
 class Acao(models.Model):
     identificador = models.CharField(max_length = 100)
-    data_entrada = models.DateField()
-    quantidade = models.IntegerField()
+    quantidade_total = models.IntegerField()
     carteira_id = models.ForeignKey(Carteira, on_delete= models.PROTECT, related_name="acao")
 
     def __str__(self):
-        return self.nome
+        return self.identificador
+
+class Historico(models.Model):
+    identificador = models.CharField(max_length = 100)
+    data_entrada = models.DateField()
+    quantidade = models.IntegerField()
+    carteira_id = models.ForeignKey(Carteira, on_delete= models.PROTECT, related_name="historico")
+
+    def __str__(self):
+        return self.identificador
     

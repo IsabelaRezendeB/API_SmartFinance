@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from smartfinance.views import UsuarioViewSet, AcaoViewSet, CarteiraViewSet
+from smartfinance.views import UsuarioViewSet, AcaoViewSet, CarteiraViewSet, ListaIdentificadoresCarteira
 from rest_framework import routers
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
@@ -41,5 +41,6 @@ router.register('carteiras', CarteiraViewSet, basename = 'Carteiras')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('acoescarteira/<int:carteira_id>/<str:identificador>/', ListaIdentificadoresCarteira.as_view()),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]

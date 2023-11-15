@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from smartfinance.models import Usuario, Acao, Carteira
+from smartfinance.models import Usuario, Acao, Carteira, Historico
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,4 +14,9 @@ class AcaoSerializer(serializers.ModelSerializer):
 class CarteiraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Carteira
+        fields = '__all__'
+
+class HistoricoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Historico
         fields = '__all__'
