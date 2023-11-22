@@ -1,0 +1,33 @@
+name: DRF Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Cache dependency 
+        uses: actions/cache@v2 
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Setup python environment 
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' 
+      - name: Install requirements 
+        run: pip install -r requirements.txt
+      - name: Make migrations 
+        run: python manage.py makemigrations
+      - name: Run Migrations 
+        run: python manage.py migrate
+      - name: Run Test 
+        run: python manage.py test
