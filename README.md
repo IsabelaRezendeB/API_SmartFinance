@@ -45,7 +45,7 @@ Back-end desenvolvido em Django Rest Framework para o aplicativo [Smart Finance]
 `GET` /carteiras/{id}/\
 `PUT` /carteiras/{id}/\
 `PATCH` /carteiras/{id}/\
-`DELETE` /carteiras/{id}/\
+`DELETE` /carteiras/{id}/
 ### **Usuários**: 
 `GET` /usuarios/\
 `POST` /usuarios/\
@@ -53,7 +53,7 @@ Back-end desenvolvido em Django Rest Framework para o aplicativo [Smart Finance]
 `PUT` /usuarios/{UID}/\
 `PATCH` /usuarios/{UID}/\
 `DELETE` /usuarios/{UID}/\
-`GET` /usuarios/?q={carteira_id}
+`GET` /usuarios/?q={carteira_id}/
 ### **Ações**: 
 `GET` /acoes/\
 `POST` /acoes/\
@@ -61,9 +61,9 @@ Back-end desenvolvido em Django Rest Framework para o aplicativo [Smart Finance]
 `PUT` /acoes/{id}/\
 `PATCH` /acoes/{id}/\
 `DELETE` /acoes/{id}/\
-`GET` /acoes/?q={carteira_id}
+`GET` /acoes/?q={carteira_id}/
 ### **Ações filtrados por carteira**: 
-`GET` /acoescarteira/{carteira_id}/{identificador}/\
+`GET` /acoescarteira/{carteira_id}/{identificador}/
 ### **Histórico**: 
 `GET` /historico/\
 `POST` /historico/\
@@ -71,7 +71,7 @@ Back-end desenvolvido em Django Rest Framework para o aplicativo [Smart Finance]
 `PUT` /historico/{id}/\
 `PATCH` /historico/{id}/\
 `DELETE` /historico/{id}/\
-`GET` /historico/?q={carteira_id}
+`GET` /historico/?q={carteira_id}/
 
 ## Equipe de Desenvolvimento
 
