@@ -1,4 +1,4 @@
-![GitHub Actions Badge](https://github.com/IsabelaRezendeB/API_SmartFinance/.github/workflows/drf-pipeline.yml/badge.svg)
+![GitHub Actions Badge](https://github.com/IsabelaRezendeB/API_SmartFinance/actions/workflows/drf-pipeline.yml/badge.svg)
 
 # API Smart Finance
 
