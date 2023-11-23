@@ -1,14 +1,11 @@
 name: DRF Unit Tests
-
 on:
   push:
     branches:
       - main
-
 jobs:
-
   test:
-  
+
     name: Run unit tests
     runs-on: ubuntu-latest
     steps:
