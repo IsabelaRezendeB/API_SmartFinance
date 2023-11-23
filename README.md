@@ -1,3 +1,5 @@
+![GitHub Actions Badge](https://github.com/IsabelaRezendeB/API_SmartFinance/.github/workflows/drf-pipeline.yml/badge.svg)
+
 # API Smart Finance
 
 Back-end desenvolvido em Django Rest Framework para o aplicativo [Smart Finance](https://github.com/IsabelaRezendeB/TCC)

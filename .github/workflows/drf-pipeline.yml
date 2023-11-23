@@ -24,14 +24,12 @@ jobs:
           python-version: '3.x' 
       - name: Install requirements 
         run: pip install -r requirements.txt
-
       - name: Uninstall requirement
         run: pip uninstall -y setuptools
       - name: Install requirement
         run: pip install setuptools
-      - name: Update
+      - name: Update requirement
         run: python3 -m pip install --upgrade pip setuptools wheel
-
       - name: Run Migrations 
         run: python manage.py migrate --run-syncdb
       - name: Run Test 
